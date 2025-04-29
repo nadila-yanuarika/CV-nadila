@@ -22,7 +22,7 @@
         <!-- About Section -->
         <section class="profile-section">
           <h2><i class="bi bi-person-badge"></i> Tentang Saya</h2>
-          <p>Sebagai mahasiswa D3 Teknologi Informasi yang aktif, komunikatif, dan memiliki ketertarikan besar dalam bidang Social Media dan Event Management. Berpengalaman mengelola proyek kampus dan aktif dalam organisasi mahasiswa, dengan keterampilan dalam berkomunikasi, manajemen acara, serta pembuatan konten digital. Siap belajar dan berkontribusi dalam tim kreatif maupun operasional.</p>
+          <p>Sebagai mahasiswa aktif D3 Teknologi Informasi yang aktif, komunikatif, dan memiliki ketertarikan besar dalam bidang Social Media dan Event Management. Berpengalaman mengelola proyek kampus dan aktif dalam organisasi mahasiswa, dengan keterampilan dalam berkomunikasi, manajemen acara, serta pembuatan konten digital. Siap belajar dan berkontribusi dalam tim kreatif maupun operasional.</p>
         </section>
 
         <!-- Education Section -->
