@@ -22,7 +22,7 @@
         <!-- About Section -->
         <section class="profile-section">
           <h2><i class="bi bi-person-badge"></i> Tentang Saya</h2>
-          <p>Sebagai mahasiswa aktif D3 Teknologi Informasi yang aktif, komunikatif, dan memiliki ketertarikan besar dalam bidang Social Media dan Event Management. Berpengalaman mengelola proyek kampus dan aktif dalam organisasi mahasiswa, dengan keterampilan dalam berkomunikasi, manajemen acara, serta pembuatan konten digital. Siap belajar dan berkontribusi dalam tim kreatif maupun operasional.</p>
+          <p>Mahasiswa D3 Teknologi Informasi dengan ketertarikan kuat di bidang Frontend Development, UI/UX Design, Social Media dan Event Management. Berpengalaman mengembangkan beberapa proyek website menggunakan JavaScript, serta memiliki pemahaman dasar tentang desain antarmuka web dan mobile. Antusias belajar, teliti, dan mampu bekerja dalam tim maupun individu.</p>
         </section>
 
         <!-- Education Section -->
@@ -37,7 +37,7 @@
                 </div>
                 <div>
                   <h3>SMAN 1 Tumpang</h3>
-                  <p class="education-period">2021 - 2023</p>
+                  <p class="education-period">2020 - 2023</p>
                 </div>
               </div>
               <div class="education-details">
@@ -128,6 +128,9 @@
           </a>
           <a href="https://www.linkedin.com/in/nadila-yanuarika-5a9488289" class="social-link">
             <i class="bi bi-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/nadila-yanuarika" class="social-link">
+            <i class="bi bi-linkedin"></i> GitHub
           </a>
         </div>
       </footer>
