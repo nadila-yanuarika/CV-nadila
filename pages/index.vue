@@ -22,7 +22,10 @@
         <!-- About Section -->
         <section class="profile-section">
           <h2><i class="bi bi-person-badge"></i> Tentang Saya</h2>
-          <p>Mahasiswa D3 Teknologi Informasi dengan ketertarikan kuat di bidang Frontend Development, UI/UX Design, Social Media dan Event Management. Berpengalaman mengembangkan beberapa proyek website menggunakan JavaScript, serta memiliki pemahaman dasar tentang desain antarmuka web dan mobile. Antusias belajar, teliti, dan mampu bekerja dalam tim maupun individu.</p>
+          <p>Mahasiswa D3 Teknologi Informasi dengan ketertarikan kuat di bidang Frontend Development, UI/UX Design,
+            Social Media dan Event Management. Berpengalaman mengembangkan beberapa proyek website menggunakan
+            JavaScript, serta memiliki pemahaman dasar tentang desain antarmuka web dan mobile. Antusias belajar,
+            teliti, dan mampu bekerja dalam tim maupun individu.</p>
         </section>
 
         <!-- Education Section -->
@@ -83,7 +86,9 @@
                 <span class="exp-year">2024</span>
               </div>
               <p class="exp-org">Yuwaraja – Ospek Fakultas Vokasi UB</p>
-              <p class="exp-desc">Bertanggung jawab memantau kesehatan ±700 mahasiswa baru selama orientasi, berkoordinasi dengan tim medis, serta menjaga kelancaran dan kenyamanan acara fakultas selama 3 hari.</p>
+              <p class="exp-desc">Bertanggung jawab memantau kesehatan ±700 mahasiswa baru selama orientasi,
+                berkoordinasi dengan tim medis, serta menjaga kelancaran dan kenyamanan acara fakultas selama 3 hari.
+              </p>
             </div>
             <div class="experience-card">
               <div class="exp-header">
@@ -91,7 +96,8 @@
                 <span class="exp-year">2024</span>
               </div>
               <p class="exp-org">Sambati – Ospek Jurusan Teknologi Informasi</p>
-              <p class="exp-desc">Bertanggung jawab mendampingi 20 mahasiswa baru, memastikan kehadiran, pemahaman agenda, dan kelancaran orientasi jurusan.</p>
+              <p class="exp-desc">Bertanggung jawab mendampingi 20 mahasiswa baru, memastikan kehadiran, pemahaman
+                agenda, dan kelancaran orientasi jurusan.</p>
             </div>
           </div>
         </section>
@@ -118,6 +124,56 @@
           </div>
         </section>
       </main>
+
+      <!-- Portfolio Section -->
+      <section class="profile-section">
+        <h2 class="section-title"><i class="bi bi-code-slash"></i> Portofolio</h2>
+        <div class="portfolio-grid">
+
+          <!-- Project: Laundry React App -->
+          <div class="portfolio-card">
+            <div class="portfolio-image">
+              <img src="/assets/laundry-react.png" alt="Laundry React App">
+              <div class="local-badge">Local Development</div>
+            </div>
+            <div class="portfolio-content">
+              <h3>Laundry Management App</h3>
+              <div class="portfolio-tech">
+                <span class="tech-pill">React</span>
+                <span class="tech-pill">Node.js</span>
+                <span class="tech-pill">Express</span>
+                <span class="tech-pill">MySQL</span>
+              </div>
+
+              <div class="setup-guide">
+                <h4><i class="bi bi-terminal"></i> Panduan Menjalankan:</h4>
+                <ol>
+                  <li>
+                    <strong>Backend</strong>:
+                    <pre><code>cd backend
+node server.js</code></pre>
+                  </li>
+                  <li>
+                    <strong>Frontend</strong>:
+                    <pre><code>cd frontend
+npm install
+npm run dev</code></pre>
+                  </li>
+                </ol>
+              </div>
+
+              <div class="portfolio-links">
+                <a href="https://github.com/nadila-yanuarika/LaundryWeb" class="portfolio-link">
+                  <i class="bi bi-github"></i> Repository
+                </a>
+                <button class="portfolio-link" onclick="copySetupGuide()">
+                  <i class="bi bi-clipboard"></i> Salin Panduan
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Footer with Social Media -->
       <footer class="profile-footer">
@@ -202,7 +258,7 @@ export default {
   right: -10px;
   bottom: -10px;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
   z-index: 1;
 }
 
@@ -304,7 +360,8 @@ export default {
   margin: 0 0 0.8rem;
   font-weight: 600;
   color: #555;
-  padding-left: 52px; /* Sesuaikan dengan icon */
+  padding-left: 52px;
+  /* Sesuaikan dengan icon */
 }
 
 .education-achievements {
@@ -337,7 +394,7 @@ export default {
     align-items: flex-start;
     gap: 0.5rem;
   }
-  
+
   .education-major,
   .education-achievements {
     padding-left: 0;
@@ -454,28 +511,211 @@ export default {
   .profile-header {
     padding: 1.5rem;
   }
-  
+
   .profile-content {
     padding: 1.5rem;
   }
-  
+
   .experience-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .timeline-date {
     position: static;
     text-align: left;
     padding-right: 0;
     margin-bottom: 0.3rem;
   }
-  
+
   .timeline::before {
     display: none;
   }
-  
+
   .timeline-content {
     padding-left: 0;
+  }
+}
+
+/* Portfolio Styles */
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #5f7cf9;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+  margin-left: var(--section-title-margin-left, 2.5rem);
+}
+
+.portfolio-grid {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.portfolio-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+  position: relative;
+}
+
+.portfolio-image {
+  position: relative;
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.local-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  backdrop-filter: blur(5px);
+}
+
+.portfolio-content {
+  padding: 1.5rem;
+}
+
+.portfolio-tech {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.8rem 0;
+  flex-wrap: wrap;
+}
+
+.tech-pill {
+  background: #e0e7ff;
+  color: #4f46e5;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.portfolio-features {
+  margin: 1rem 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.portfolio-features li {
+  margin-bottom: 0.6rem;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.portfolio-features li i {
+  position: absolute;
+  left: 0;
+  color: #4f46e5;
+}
+
+.setup-guide {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 3px solid #4f46e5;
+}
+
+.setup-guide h4 {
+  margin-top: 0;
+  font-size: 1rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.setup-guide ol {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.setup-guide pre {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 0.8rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  margin: 0.5rem 0;
+  font-family: 'Courier New', monospace;
+}
+
+.portfolio-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.portfolio-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  color: #334155;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.portfolio-link:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.portfolio-link i {
+  font-size: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .portfolio-image img {
+    height: 180px;
+  }
+  
+  .setup-guide pre {
+    font-size: 0.75rem;
+    padding: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-content {
+    padding: 1rem;
+  }
+  
+  .portfolio-links {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .portfolio-link {
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -483,12 +723,12 @@ export default {
   .profile-page {
     padding: 1rem;
   }
-  
+
   .contact-info {
     flex-direction: column;
     gap: 0.5rem;
   }
-  
+
   .social-links {
     flex-direction: column;
     gap: 1rem;
