@@ -130,45 +130,60 @@
         <h2 class="section-title"><i class="bi bi-code-slash"></i> Portofolio</h2>
         <div class="portfolio-grid">
 
-          <!-- Project: Laundry React App -->
+          <!-- Project 1: Laundry React App -->
           <div class="portfolio-card">
             <div class="portfolio-image">
               <img src="/assets/laundry-react.png" alt="Laundry React App">
-              <div class="local-badge">Local Development</div>
+              <div class="live-badge">Live Demo</div>
             </div>
             <div class="portfolio-content">
-              <h3>Laundry Management App</h3>
+              <h3>Laundry Management System</h3>
               <div class="portfolio-tech">
                 <span class="tech-pill">React</span>
                 <span class="tech-pill">Node.js</span>
                 <span class="tech-pill">Express</span>
                 <span class="tech-pill">MySQL</span>
               </div>
-
-              <div class="setup-guide">
-                <h4><i class="bi bi-terminal"></i> Panduan Menjalankan:</h4>
-                <ol>
-                  <li>
-                    <strong>Backend</strong>:
-                    <pre><code>cd backend
-node server.js</code></pre>
-                  </li>
-                  <li>
-                    <strong>Frontend</strong>:
-                    <pre><code>cd frontend
-npm install
-npm run dev</code></pre>
-                  </li>
-                </ol>
-              </div>
-
+              <ul class="portfolio-features">
+                <li><i class="bi bi-check-circle"></i> Sistem pemesanan online dengan tracking</li>
+                <li><i class="bi bi-check-circle"></i> Dashboard admin untuk manajemen order</li>
+              </ul>
               <div class="portfolio-links">
-                <a href="https://github.com/nadila-yanuarika/LaundryWeb" class="portfolio-link">
-                  <i class="bi bi-github"></i> Repository
+                <a href="https://github.com/nadila-yanuarika/laundry" target="_blank" class="portfolio-link">
+                  <i class="bi bi-github"></i> Source Code
                 </a>
-                <button class="portfolio-link" onclick="copySetupGuide()">
-                  <i class="bi bi-clipboard"></i> Salin Panduan
-                </button>
+                <a href="https://web-laundry-pi.vercel.app/" target="_blank" class="portfolio-link primary">
+                  <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: CV Website -->
+          <div class="portfolio-card">
+            <div class="portfolio-image">
+              <img src="/assets/cv.png" alt="Interactive CV Website">
+              <div class="live-badge">Live Demo</div>
+            </div>
+            <div class="portfolio-content">
+              <h3>Interactive CV Website</h3>
+              <div class="portfolio-tech">
+                <span class="tech-pill">Vue.js</span>
+                <span class="tech-pill">CSS3</span>
+                <span class="tech-pill">HTML5</span>
+                <span class="tech-pill">Responsive</span>
+              </div>
+              <ul class="portfolio-features">
+                <li><i class="bi bi-check-circle"></i> Portofolio interaktif dengan animasi</li>
+                <li><i class="bi bi-check-circle"></i> Desain responsif untuk semua perangkat</li>
+              </ul>
+              <div class="portfolio-links">
+                <a href="https://github.com/nadila-yanuarika/CV-nadila" target="_blank" class="portfolio-link">
+                  <i class="bi bi-github"></i> Source Code
+                </a>
+                <a href="https://cv-nadila.vercel.app/" target="_blank" class="portfolio-link primary">
+                  <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                </a>
               </div>
             </div>
           </div>
@@ -536,76 +551,110 @@ export default {
   }
 }
 
-/* Portfolio Styles */
+/* Portfolio Enhancements */
 .section-title {
   font-size: 1.5rem;
   font-weight: bold;
   color: #5f7cf9;
   margin-top: 0rem;
   margin-bottom: 1rem;
-  margin-left: var(--section-title-margin-left, 2.5rem);
+  margin-left: var(--section-title-margin-left, 2rem);
 }
 
 .portfolio-grid {
-  max-width: 800px;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  justify-items: center;
 }
 
 .portfolio-card {
-  border-radius: 12px;
+  width: 100%;
+  max-width: 360px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  border: 1px solid #eee;
-  position: relative;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  background: white;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+}
+
+
 .portfolio-image {
+  height: 200px;
+  overflow: hidden;
   position: relative;
 }
 
 .portfolio-image img {
   width: 100%;
-  height: 220px;
+  height: 100%;
   object-fit: cover;
-  border-bottom: 1px solid #f0f0f0;
+  transition: transform 0.4s ease;
 }
 
-.local-badge {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: rgba(0,0,0,0.7);
-  color: white;
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  backdrop-filter: blur(5px);
+.portfolio-card:hover .portfolio-image img {
+  transform: scale(1.05);
 }
+
+
+.live-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #00b894;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
 
 .portfolio-content {
   padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.portfolio-content h3 {
+  font-size: 1.25rem;
+  color: #2d3436;
+  margin-bottom: 0.75rem;
 }
 
 .portfolio-tech {
   display: flex;
-  gap: 0.5rem;
-  margin: 0.8rem 0;
   flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .tech-pill {
-  background: #e0e7ff;
-  color: #4f46e5;
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
+  background-color: #e0f3ff;
+  color: #0984e3;
+  padding: 0.3rem 0.7rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
   font-weight: 500;
 }
 
 .portfolio-features {
-  margin: 1rem 0;
-  padding-left: 0;
   list-style: none;
+  padding-left: 0;
+  margin: 0 0 1.2rem;
+  color: #636e72;
+  font-size: 0.85rem;
+  line-height: 1.5;
 }
 
 .portfolio-features li {
@@ -613,78 +662,67 @@ export default {
   padding-left: 1.5rem;
   position: relative;
   color: #555;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   line-height: 1.5;
 }
 
 .portfolio-features li i {
   position: absolute;
   left: 0;
-  color: #4f46e5;
-}
-
-.setup-guide {
-  background: #f8f9fa;
-  border-radius: 8px;
-  padding: 1rem;
-  margin: 1rem 0;
-  border-left: 3px solid #4f46e5;
-}
-
-.setup-guide h4 {
-  margin-top: 0;
-  font-size: 1rem;
-  color: #333;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.setup-guide ol {
-  padding-left: 1.2rem;
-  margin: 0.5rem 0;
-}
-
-.setup-guide pre {
-  background: #2d2d2d;
-  color: #f8f8f2;
-  padding: 0.8rem;
-  border-radius: 6px;
-  overflow-x: auto;
-  font-size: 0.85rem;
-  margin: 0.5rem 0;
-  font-family: 'Courier New', monospace;
+  color: #00b894;
+  font-size: 1.1rem;
 }
 
 .portfolio-links {
   display: flex;
   gap: 1rem;
-  margin-top: 1.2rem;
-  flex-wrap: wrap;
+  margin-top: auto;
 }
 
 .portfolio-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.5rem 1rem;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 6px;
-  color: #334155;
-  text-decoration: none;
+  flex: 1;
+  text-align: center;
+  padding: 0.6rem 0;
+  border-radius: 8px;
   font-size: 0.9rem;
-  transition: all 0.2s;
-  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s;
 }
 
-.portfolio-link:hover {
-  background: #f1f5f9;
-  border-color: #cbd5e1;
+.portfolio-link.primary {
+  background-color: #6c5ce7;
+  color: white;
 }
 
-.portfolio-link i {
-  font-size: 1rem;
+.portfolio-link.primary:hover {
+  background-color: #5649c0;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(108, 92, 231, 0.3);
+}
+
+.portfolio-link:not(.primary) {
+  background-color: #f0f2f5;
+  color: #2d3436;
+  border: 1px solid #dfe6e9;
+}
+
+.portfolio-link:not(.primary):hover {
+  background-color: #dfe6e9;
+}
+
+@media (max-width: 768px) {
+  .portfolio-card {
+    max-width: 100%;
+  }
+
+  .portfolio-grid {
+    gap: 1rem;
+  }
+
+  .portfolio-content {
+    padding: 1rem;
+  }
 }
 
 /* Responsive Adjustments */
@@ -692,11 +730,11 @@ export default {
   .portfolio-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .portfolio-image img {
     height: 180px;
   }
-  
+
   .setup-guide pre {
     font-size: 0.75rem;
     padding: 0.6rem;
@@ -707,12 +745,12 @@ export default {
   .portfolio-content {
     padding: 1rem;
   }
-  
+
   .portfolio-links {
     flex-direction: column;
     gap: 0.8rem;
   }
-  
+
   .portfolio-link {
     width: 100%;
     justify-content: center;
