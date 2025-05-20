@@ -181,7 +181,7 @@
                 <a href="https://github.com/nadila-yanuarika/CV-nadila" target="_blank" class="portfolio-link">
                   <i class="bi bi-github"></i> Source Code
                 </a>
-                <a href="https://cv-nadila.vercel.app/" target="_blank" class="portfolio-link primary">
+                <a href="https://cv-profile-rose.vercel.app/" target="_blank" class="portfolio-link primary">
                   <i class="bi bi-box-arrow-up-right"></i> Live Demo
                 </a>
               </div>
